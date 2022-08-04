@@ -17,3 +17,7 @@ The trainee wil be learning how to create an Angular application using the Angul
 ## Requirements/Tasks(s):
 
 The trainee must use the Angular CLI to accomplish create the application.
+
+## Planned Graph
+
+![Visual Representation of the App done in draw.io](https://imgur.com/a/CDHysk4)
