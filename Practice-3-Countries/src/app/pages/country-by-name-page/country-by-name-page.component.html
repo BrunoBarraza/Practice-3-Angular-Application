@@ -1,1 +1,4 @@
-<p>country-by-name-page works!</p>
+<p
+  *ngIf="countryDetail$ | async as country"
+  [innerHtml]="country.extract_html"
+></p>

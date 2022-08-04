@@ -1,1 +1,4 @@
-<p>country-list-page works!</p>
+<h2>Countries of the World</h2>
+<ng-container *ngIf="countryList$ | async as countryList">
+  <app-countries-table [countryList]="countryList"></app-countries-table>
+</ng-container>

@@ -1,0 +1,37 @@
+<ng-container class="container">
+  <h2>Countries of the World</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Official Name</th>
+        <th>Capital</th>
+        <th>Region</th>
+        <th>Language</th>
+        <th>Population</th>
+        <th>Flag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countryList">
+        <td>
+          {{ country.official_name }}
+        </td>
+        <td>
+          {{ country.capital | arrayToString }}
+        </td>
+        <td>
+          {{ country.region }}
+        </td>
+        <td>
+          {{ country.language | objectValues | arrayToString }}
+        </td>
+        <td>
+          {{ country.population }}
+        </td>
+        <td>
+          {{ country.flag }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
