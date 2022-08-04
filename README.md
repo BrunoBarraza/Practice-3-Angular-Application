@@ -20,4 +20,4 @@ The trainee must use the Angular CLI to accomplish create the application.
 
 ## Planned Graph
 
-![Visual Representation of the App done in draw.io](https://imgur.com/a/CDHysk4)
+![Visual Representation of the App done in draw.io](https://i.imgur.com/keSGJKv.png)
