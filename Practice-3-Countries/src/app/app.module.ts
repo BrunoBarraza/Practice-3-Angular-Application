@@ -12,6 +12,8 @@ import { ArrayToStringPipe } from './pipes/array-to-string.pipe';
 import { FilterByPipe } from './pipes/filter-by.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { PaginationPipe } from './pipes/pagination.pipe';
+import { TableRowDirective } from './directives/table-row.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,15 @@ import { PaginationPipe } from './pipes/pagination.pipe';
     FilterByPipe,
     SortPipe,
     PaginationPipe,
+    TableRowDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
