@@ -1,3 +1,6 @@
+import { ENDPOINTS } from 'src/app/enums/endpoints';
+
 export const environment = {
-  production: true
+  production: true,
+  endpoints: ENDPOINTS,
 };
