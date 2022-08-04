@@ -21,3 +21,7 @@ The trainee must use the Angular CLI to accomplish create the application.
 ## Planned Graph
 
 ![Visual Representation of the App done in draw.io](https://i.imgur.com/WGpLOai.png)
+
+## Hosting URL
+
+[Hosted in Firebase](https://practice-3-countries.web.app)

@@ -12,20 +12,24 @@ export class FilterByPipe implements PipeTransform {
     }
     return countryList.filter(
       (country) =>
-        country.official_name.toLowerCase().includes(searchBy.toLowerCase()) ||
+        country.official_name
+          .toLocaleLowerCase()
+          .includes(searchBy.toLocaleLowerCase()) ||
         country.capital
           ?.toString()
-          .toLowerCase()
-          .includes(searchBy.toLowerCase()) ||
-        country.region.toLowerCase().includes(searchBy.toLowerCase()) ||
+          .toLocaleLowerCase()
+          .includes(searchBy.toLocaleLowerCase()) ||
+        country.region
+          .toLocaleLowerCase()
+          .includes(searchBy.toLocaleLowerCase()) ||
         country.language
           ?.toString()
-          .toLowerCase()
-          .includes(searchBy.toLowerCase()) ||
+          .toLocaleLowerCase()
+          .includes(searchBy.toLocaleLowerCase()) ||
         country.population
           .toString()
-          .toLowerCase()
-          .includes(searchBy.toLowerCase())
+          .toLocaleLowerCase()
+          .includes(searchBy.toLocaleLowerCase())
     );
   }
 }

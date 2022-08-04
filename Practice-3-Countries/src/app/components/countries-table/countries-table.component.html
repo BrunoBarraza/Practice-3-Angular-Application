@@ -1,15 +1,11 @@
 <ng-container class="container">
   <h2>Countries of the World</h2>
   <div></div>
-  <table>
-    <thead>
-      <input
-        type="text"
-        [formControl]="searchBy"
-        placeholder="Search by all"
-      />
+  <table class="responsive-table">
+    <thead class="table-header">
+      <input type="text" [formControl]="searchBy" placeholder="Search by all" />
       <hr />
-      <tr>
+      <tr class="table-row">
         <th>
           Official Name
           <button type="button" (click)="switchSort()">
@@ -25,6 +21,7 @@
     </thead>
     <tbody>
       <tr
+        class="table-row"
         appTableRow
         [countryName]="country.official_name"
         *ngFor="
