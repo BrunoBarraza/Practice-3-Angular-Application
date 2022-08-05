@@ -1,4 +1,9 @@
-<p
-  *ngIf="countryDetail$ | async as country"
-  [innerHtml]="country.extract_html"
-></p>
+<content class="container">
+  <body>
+    <content
+      *ngIf="countryDetail$ | async as country"
+      [innerHtml]="country.extract_html"
+    >
+    </content>
+  </body>
+</content>

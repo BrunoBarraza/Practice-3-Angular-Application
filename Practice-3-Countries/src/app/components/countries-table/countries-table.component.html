@@ -1,11 +1,16 @@
 <ng-container class="container">
-  <h2>Countries of the World</h2>
-  <div></div>
+  <h1>Countries of the World</h1>
+  <form role="search" class="wrapper">
+    <input
+      type="text"
+      class="search"
+      [formControl]="searchBy"
+      placeholder="Search by all"
+    />
+  </form>
   <table class="responsive-table">
-    <thead class="table-header">
-      <input type="text" [formControl]="searchBy" placeholder="Search by all" />
-      <hr />
-      <tr class="table-row">
+    <thead>
+      <tr>
         <th>
           Official Name
           <button type="button" (click)="switchSort()">
@@ -21,14 +26,13 @@
     </thead>
     <tbody>
       <tr
-        class="table-row"
         appTableRow
         [countryName]="country.official_name"
         *ngFor="
           let country of countryList
+            | filterBy: searchBy.value
             | sort: sortType
             | pagination: limits[0]:limits[1]
-            | filterBy: searchBy.value
         "
       >
         <td>
@@ -51,20 +55,19 @@
         </td>
       </tr>
     </tbody>
-    <hr />
-    <tfoot>
-      <button
-        (click)="paginate(currentIndex - 1)"
-        [disabled]="currentIndex === 0"
-      >
-        &lt;
-      </button>
-      <button
-        (click)="paginate(currentIndex + 1)"
-        [disabled]="limits[1] === countryList.length - 1"
-      >
-        &gt;
-      </button>
-    </tfoot>
   </table>
+  <div class="wrapper">
+    <button
+      (click)="paginate(currentIndex - 1)"
+      [disabled]="currentIndex === 0"
+    >
+      ❮
+    </button>
+    <button
+      (click)="paginate(currentIndex + 1)"
+      [disabled]="limits[1] === countryList.length - 1"
+    >
+      ❯
+    </button>
+  </div>
 </ng-container>
